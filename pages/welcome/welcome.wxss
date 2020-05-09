@@ -1,0 +1,36 @@
+/* pages/welcome/welcome.wxss */
+page {
+  height: 100%;
+  background-color: #b4d4db;
+}
+.user-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.user-avatar {
+  width: 200rpx;
+  height: 200rpx;
+  margin-top: 160rpx;
+}
+.user-title {
+  margin-top: 100rpx;
+  font-size: 32rpx;
+  font-weight:bold;
+}
+
+.user-btn-container {
+  border: 1rpx solid black;
+  width: 200rpx;
+  height: 80rpx;
+  border-radius: 5rpx;
+  text-align: center;
+  margin-top: 200rpx;
+}
+.user-btn-desc {
+  font-size: 22rpx;
+  font-weight:bold;
+  line-height: 80rpx;
+  color:#405f80;
+}
