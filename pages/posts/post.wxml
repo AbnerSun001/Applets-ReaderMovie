@@ -1,0 +1,30 @@
+<view>
+  <swiper indicator-dots='true' autoplay interval='2000'>
+    <swiper-item>
+      <image src='../../images/wx.png'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='../../images/vr.png'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='../../images/iqiyi.png'></image>
+    </swiper-item>
+  </swiper>
+
+  <view class="post-article-container">
+    <view class="post-article-container-avatar">
+      <image src='../../images/avatar/1.png'></image>
+      <text>Sep 20 2020</text>
+    </view>
+    <text class="post-article-container-title">又是虾肥蟹壮时</text>
+    <image  class="post-article-container-img" src='../../images/post/crab.png'></image>
+    <text class="post-article-container-desc">一只只青蟹被装进一泡沫箱里，原来那些青蟹是摆在桌上的，用红色的编织绳扎着。也许那时的绳子要厚重些，扎得牢些，那些蟹蟹比较乖。而此刻一抓起，这蟹蟹一溜就掉在地上了，我想着它应该会肉疼吧。这蟹看着活力十足，一看就很好吃的样子。点了两只蟹，加一斤虾，一盘年糕当盘底，底料还有花生米、香菜，吃着吃着，觉得这味有点不对，这从二楼搬到一楼的店，招牌换了、味道变了，莫非老板也变了。少了那一颗颗蒜子，那会我们几个可吃得欢了。</text>
+    <view class="post-article-container-like">
+      <image src='../../images/icon/chat1.png'></image>
+      <text>92</text>
+      <image src='../../images/icon/view.png'></image>
+      <text>62</text>
+    </view>
+  </view>
+
+</view>
