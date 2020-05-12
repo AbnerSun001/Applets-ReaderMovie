@@ -1,3 +1,4 @@
+@import 'post-template/post-item-template.wxss'
 page {
   background: #F8F8F8;
 }
@@ -7,62 +8,4 @@ swiper {
 swiper image {
   width: 100%;
   height: 500rpx;
-}
-
-.post-article-container {
-  display: flex;
-  flex-direction: column;
-  background: #fff;
-  margin-top: 20rpx;
-}
-
-.post-article-container-avatar {
-  height: 50rpx;
-  padding-left: 20rpx;
-  line-height: 50rpx; /* 是为了让幽灵节点的高度足够高 */
-}
-
-.post-article-container-avatar image {
-  width: 50rpx;
-  height: 50rpx;
-  margin-right: 35rpx;
-  vertical-align: middle; /* 当幽灵节点的高度足够高的时候，图片的vertical-align:middle就起作用了*/
-}
-
-.post-article-container-avatar text {
-  color: #878787;
-  font-size: 14px;
-}
-
-.post-article-container-title {
-  color: #3B3B3B;
-  font-size: 20px;
-  font-weight: bold;
-  margin: 29rpx 0 0 20rpx;
-}
-
-.post-article-container-img {
-  width: 100%;
-  margin: 37rpx 0;
-}
-
-.post-article-container-desc {
-  color: #7B7B7B;
-  font-size: 14px;
-  font-family: MicroSoft YaHei;
-  margin: 0 18rpx 25rpx 18rpx;
-  text-indent: 25px;
-  text-align: justify;
-}
-
-.post-article-container-like image {
-  width: 15px;
-  height: 15px;
-  margin-right: 16rpx;
-}
-
-.post-article-container-like text {
-  font-size: 14px;
-  color: #909090;
-  margin-right: 13px;
 }
