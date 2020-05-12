@@ -3,6 +3,6 @@
   <image src="../../images/avatar.jpg" class="user-avatar"></image>
   <text class="user-title">Hello,七月</text>
   <view class="user-btn-container">
-    <text class="user-btn-desc">开启小程序之旅</text>
+    <text class="user-btn-desc" bindtap="onTap">开启小程序之旅</text>
   </view>
 </view>

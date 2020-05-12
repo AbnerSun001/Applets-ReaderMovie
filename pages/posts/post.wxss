@@ -50,7 +50,9 @@ swiper image {
   color: #7B7B7B;
   font-size: 14px;
   font-family: MicroSoft YaHei;
-  margin: 0 0 25rpx 18rpx;
+  margin: 0 18rpx 25rpx 18rpx;
+  text-indent: 25px;
+  text-align: justify;
 }
 
 .post-article-container-like image {

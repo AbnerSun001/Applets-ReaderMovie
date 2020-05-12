@@ -8,6 +8,16 @@ Page({
 
   },
 
+  onTap: function () {
+    // wx.redirectTo({
+    //   url: '../posts/post'
+    // })    // 和跳转页面是平级关系
+
+    wx.navigateTo({
+      url: '../posts/post',
+    })    //  和跳转页面是父子关系，微信自动生成返回按钮
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
