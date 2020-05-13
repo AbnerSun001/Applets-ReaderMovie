@@ -13,7 +13,8 @@
     <view class="iconContainer">
       <view class="iconContainerDivide"></view>
       <view class="iconContainerIcons">
-        <image src='../../images/icon/collection.png' />
+        <image wx:if="{{collected}}" catchtap="onCollectionTap" src='../../images/icon/collection.png' />
+        <image wx:else catchtap="onCollectionTap" src='../../images/icon/collection-anti.png' />
         <image src="../../images/icon/share.png" />
       </view>
     </view>
