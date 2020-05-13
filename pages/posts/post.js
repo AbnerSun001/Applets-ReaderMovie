@@ -19,7 +19,9 @@ Page({
 
   onPostTap: function (event) {
     const postId = event.currentTarget.dataset.postId;
-    console.log(postId);
+    wx.navigateTo({
+      url: '../../pages/postDetail/postDetail?postId=' + postId,
+    })
   },
 
   /**
