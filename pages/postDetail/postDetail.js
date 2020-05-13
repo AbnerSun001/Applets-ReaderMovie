@@ -44,10 +44,33 @@ Page({
     let postsCollected = wx.getStorageSync("postsCollected");
     let postCollected = postsCollected[that.data.postId];
     this.setData({
-      collected: !postCollected 
+      collected: !postCollected
     })
-    postsCollected[that.data.postId] = !postCollected
-    wx.setStorageSync('postsCollected', postsCollected)
+    postsCollected[that.data.postId] = !postCollected;
+    wx.setStorageSync('postsCollected', postsCollected);
+
+    setTimeout(() => {
+      wx.showToast({
+        title: !postCollected ? '收藏成功' : "取消成功",
+        icon: 'success'
+      })
+    }, 700)
+  },
+
+  /**
+   * 分享按钮事件监听函数
+   */
+  onShareTap: function(event) {
+    wx.showActionSheet({
+      itemList: ['分享至QQ', '分享至微博', '分享至朋友圈'],
+      success(res) {
+        console.log(res.tapIndex)
+      },
+      fail(res) {
+        console.log(res.errMsg)
+      }
+    })
+
   },
 
   /**
