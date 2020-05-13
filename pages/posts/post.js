@@ -17,6 +17,11 @@ Page({
      })
   },
 
+  onPostTap: function (event) {
+    const postId = event.currentTarget.dataset.postId;
+    console.log(postId);
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

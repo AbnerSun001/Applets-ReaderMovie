@@ -1,4 +1,4 @@
-<import src='post-template/post-item-template.wxml'/>
+<import src='post-template/post-item-template.wxml' />
 <view>
   <swiper indicator-dots='true' autoplay interval='2000'>
     <swiper-item>
@@ -11,9 +11,11 @@
       <image src='../../images/iqiyi.png'></image>
     </swiper-item>
   </swiper>
-  
-  <block wx:for="{{postContent}}" wx:item="item"  wx:index="index">
-     <template is='postItemTemplate' data='{{item}}'/>
+
+  <block wx:for="{{postContent}}" wx:item="item" wx:index="index">
+    <view catchtap="onPostTap" data-post-id="{{item.postId}}">
+      <template is='postItemTemplate' data='{{...item}}' />
+    </view>
   </block>
 
 </view>

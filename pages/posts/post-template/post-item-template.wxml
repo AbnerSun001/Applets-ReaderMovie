@@ -1,12 +1,12 @@
 <template name='postItemTemplate'>
   <view class="post-article-container">
     <view class="post-article-container-avatar">
-      <image src='{{item.imgAvatar}}'></image>
-      <text>{{item.date}} + {{index}}</text>
+      <image src='{{imgAvatar}}'></image>
+      <text>{{date}} + {{index}}</text>
     </view>
-    <text class="post-article-container-title">{{item.title}}</text>
-    <image class="post-article-container-img" src='{{item.imgPost}}'></image>
-    <text class="post-article-container-desc">{{item.desc}}</text>
+    <text class="post-article-container-title">{{title}}</text>
+    <image class="post-article-container-img" src='{{imgPost}}'></image>
+    <text class="post-article-container-desc">{{desc}}</text>
     <view class="post-article-container-like">
       <image src='../../images/icon/chat1.png'></image>
       <text>92</text>
