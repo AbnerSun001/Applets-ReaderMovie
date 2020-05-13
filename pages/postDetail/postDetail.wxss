@@ -1,0 +1,82 @@
+.bannerImgContainer {
+  position: relative;
+  height: 355rpx;
+  width: 100%;
+}
+
+.bannerImgContainer image:first-child {
+  width: 100%;
+  height: 100%;
+}
+
+.bannerImgContainer image:last-child {
+  position: absolute;
+  width: 80rpx;
+  height: 80rpx;
+  opacity: 0.6;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.bottomContainer {
+  padding: 20rpx 26rpx 0;
+}
+
+.autherContainer {
+  line-height: 46rpx;
+  margin-bottom: 37rpx;
+}
+
+.autherContainer image {
+  width: 46rpx;
+  height: 46rpx;
+  margin-right: 20rpx;
+  vertical-align: middle;
+}
+
+.autherContainer text {
+  font-size: 16px;
+  color: #6d6d6d;
+}
+
+.title {
+  color: #4b556c;
+  font-weight: bold;
+}
+
+.iconContainer {
+  margin-top: 25rpx;
+  height: 70rpx;
+  position: relative;
+}
+
+.iconContainerDivide {
+  border: 1rpx solid #e5e5e5;
+  z-index: -1;
+}
+
+.iconContainerIcons {
+  position: absolute;
+  top: -35rpx;
+  left: calc(100% - 165rpx);
+}
+
+.iconContainerIcons image {
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.iconContainerIcons image:first-child {
+  margin-right: 25rpx;
+}
+
+.article {
+  display: inline-block;
+  font-size: 16px;
+  color: #666;
+  text-indent: 37px;
+  text-align: justify;
+}
