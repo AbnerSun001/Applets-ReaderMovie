@@ -1,12 +1,12 @@
 const postsData = require('../../data/posts-data.js')
-
+const app = getApp();
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-
+    isPlaying: false,
+    postId: 0
   },
 
   /**
@@ -19,6 +19,12 @@ Page({
       postData: postData,
       postId: postId
     })
+    
+    if (app.globalData.g_currentMusicPostId === this.data.postId) {
+      this.setData({
+        isPlaying: app.globalData.g_isPlaying
+      })
+    }
 
     let postsCollected = wx.getStorageSync("postsCollected");
     if (postsCollected) {
@@ -70,14 +76,42 @@ Page({
         console.log(res.errMsg)
       }
     })
+  },
 
+  /**
+   * 音乐播放监听事件函数
+   */
+  onMusicTap: function(event) {
+    let isPlaying = this.data.isPlaying;
+    if (isPlaying) {
+      this.InnerAudioContext.pause();
+      this.setData({
+        isPlaying: false
+      })
+      app.globalData.g_isPlaying = false;
+      app.globalData.g_currentMusicPostId = null;
+    } else {
+      this.InnerAudioContext.play();
+      this.setData({
+        isPlaying: true
+      })
+      app.globalData.g_isPlaying = true;
+      app.globalData.g_currentPostId === this.data.postId;
+    }
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function() {
-
+    const currentPostId = this.data.postId;
+    const postData = postsData.postContent[currentPostId];
+    this.InnerAudioContext = app.globalData.g_innerAudioContext;
+    this.InnerAudioContext.src = postData.musicSrc;
+    this.InnerAudioContext.onError((res) => {
+      console.log(res.errMsg)
+      console.log(res.errCode)
+    })
   },
 
   /**

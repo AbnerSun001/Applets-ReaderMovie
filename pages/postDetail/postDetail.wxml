@@ -1,7 +1,7 @@
 <view class="container">
   <view class="bannerImgContainer">
     <image src='{{postData.imgPost}}' />
-    <image src="../../images/music/music-start.png" />
+    <image catchtap="onMusicTap" src='{{isPlaying ? "../../images/music/music-stop.png" : "../../images/music/music-start.png"}}' />
   </view>
   <view class="bottomContainer">
     <view class="autherContainer">

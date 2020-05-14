@@ -33,7 +33,11 @@ App({
       }
     })
   },
+  // 用于保存全局数据
   globalData: {
-    userInfo: null
+    userInfo: null,
+    g_isPlaying: false,
+    g_currentMusicPostId: null,
+    g_innerAudioContext: wx.createInnerAudioContext()
   }
 })
