@@ -2,8 +2,8 @@
 
 <template name="movie-template">
   <view class="movie-container">
-    <image src="/images/lover.webp" class="movie-container-poster"></image>
-    <text class="movie-container-name">爱人</text>
-    <template is="star-template"></template>
+    <image src="{{imageUrl}}" class="movie-container-poster"></image>
+    <text class="movie-container-name">{{title}}</text>
+    <template is="star-template" data="{{average}}"></template>
   </view>
 </template>

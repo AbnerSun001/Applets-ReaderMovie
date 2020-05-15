@@ -12,8 +12,10 @@
 }
 
 .movie-container-name {
-  width: 125rpx;
   margin: 16rpx 0;
   color: #6B6B6B;
   font-size: 25rpx;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+  overflow: hidden;
 }
