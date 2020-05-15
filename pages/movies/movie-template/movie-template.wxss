@@ -1,0 +1,19 @@
+@import '../star-template/star-template.wxss';
+
+.movie-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.movie-container-poster {
+  width: 125px;
+  height: 167px;
+}
+
+.movie-container-name {
+  width: 125rpx;
+  margin: 16rpx 0;
+  color: #6B6B6B;
+  font-size: 25rpx;
+}

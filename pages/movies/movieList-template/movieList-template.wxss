@@ -1,0 +1,31 @@
+@import '../movie-template/movie-template.wxss';
+
+.movieList-container {
+  margin: 0 10rpx 60rpx;
+}
+.movieList-container-classsify {
+  display: flex;
+  justify-content: space-between;
+  margin: 22rpx 0;
+}
+
+.movieList-container-classsify > text {
+  color: #757575;
+  font-size: 25rpx;
+}
+
+.movieList-container-more image {
+  width: 15rpx;
+  height: 15rpx;
+}
+
+.movieList-container-more text {
+  color: #2E57AB;
+  font-size: 25rpx;
+  margin-right: 10rpx;
+}
+
+.movieList-container-tempaltes {
+  display: flex;
+  justify-content: space-between;
+}

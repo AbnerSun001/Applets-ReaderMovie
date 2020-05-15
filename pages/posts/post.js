@@ -5,7 +5,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-
   },
 
   /**
@@ -19,6 +18,13 @@ Page({
 
   onPostTap: function (event) {
     const postId = event.currentTarget.dataset.postId;
+    wx.navigateTo({
+      url: '../../pages/postDetail/postDetail?postId=' + postId,
+    })
+  },
+
+  onSwiperTap: function(event) {
+    const postId = event.target.dataset.postId;
     wx.navigateTo({
       url: '../../pages/postDetail/postDetail?postId=' + postId,
     })

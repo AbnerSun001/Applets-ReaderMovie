@@ -1,0 +1,17 @@
+.star-container {
+  display: flex;
+  font-size: 25rpx;
+}
+
+.star-container image {
+  width: 15rpx;
+  height: 15rpx;
+}
+
+.star-container-imgs {
+  margin-right: 18rpx;
+}
+
+.star-container text{
+  color: #374A74;
+}

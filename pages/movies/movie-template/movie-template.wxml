@@ -1,0 +1,9 @@
+<import src="../star-template/star-template.wxml" />
+
+<template name="movie-template">
+  <view class="movie-container">
+    <image src="/images/lover.webp" class="movie-container-poster"></image>
+    <text class="movie-container-name">爱人</text>
+    <template is="star-template"></template>
+  </view>
+</template>
