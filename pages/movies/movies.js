@@ -1,5 +1,6 @@
 // pages/movies/movies.js
-var app = getApp();
+let app = getApp();
+let utils = require("../../utils/util.js")
 Page({
 
   /**
@@ -39,7 +40,7 @@ Page({
         'Content-Type': "application/xml"
       },
       success: function(res) {
-        console.log(res.data);
+        console.log(res.data.subjects)
         that.dealDouBanData(res.data.subjects, type, status);
       }
     })
@@ -49,11 +50,13 @@ Page({
     let movies = [];
     let allTypeMovie = {};
     data.forEach(item => {
+      let starsArr = utils.covertScore2Array(item.rating.stars);
       let movie = {
         title: item.title,
         imageUrl: item.images.large,
         average: item.rating.average,
         movieId: item.id,
+        stars: starsArr,
         status: status
       };
       movies.push(movie);

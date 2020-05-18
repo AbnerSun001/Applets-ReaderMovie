@@ -14,6 +14,21 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
+
+const covertScore2Array = number => {
+  const num = number.toString().split(0,1);
+  let array =[];
+  for (let i = 0; i<5;i++) {
+    if(i<num) {
+      array.push(1)
+    } else {
+      array.push(0)
+    }
+  }
+  return array;
+}
+
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  covertScore2Array: covertScore2Array
 }
