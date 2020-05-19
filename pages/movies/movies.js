@@ -70,6 +70,13 @@ Page({
     })
   },
 
+  onMoreMovie: function(event) {
+    const category = event.currentTarget.dataset.category;
+    wx.navigateTo({
+      url: 'more-movie/moreMovie?category=' + category,
+    })
+  },
+
   /**
    * 生命周期函数--监听页面显示
    */
