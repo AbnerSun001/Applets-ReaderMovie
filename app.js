@@ -40,6 +40,6 @@ App({
     g_currentMusicPostId: null,
     g_innerAudioContext: wx.createInnerAudioContext(),
     g_doubanDomain: "http://api.douban.com",
-    g_doubanSuffix: "&apikey=0b2bdeda43b5688921839c8ecb20399b"
+    g_doubanSuffix: "apikey=0b2bdeda43b5688921839c8ecb20399b"
   }
 })

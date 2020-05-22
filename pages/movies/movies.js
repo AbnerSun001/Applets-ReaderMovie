@@ -23,9 +23,9 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function() {
-    const top250Url = app.globalData.g_doubanDomain + "/v2/movie/top250?start=0&count=3" + app.globalData.g_doubanSuffix;
-    const inTheatersUrl = app.globalData.g_doubanDomain + "/v2/movie/in_theaters?start=0&count=3" + app.globalData.g_doubanSuffix;
-    const comingSoonUrl = app.globalData.g_doubanDomain + "/v2/movie/coming_soon?start=0&count=3" + app.globalData.g_doubanSuffix;
+    const top250Url = app.globalData.g_doubanDomain + "/v2/movie/top250?start=0&count=3&" + app.globalData.g_doubanSuffix;
+    const inTheatersUrl = app.globalData.g_doubanDomain + "/v2/movie/in_theaters?start=0&count=3&" + app.globalData.g_doubanSuffix;
+    const comingSoonUrl = app.globalData.g_doubanDomain + "/v2/movie/coming_soon?start=0&count=3&" + app.globalData.g_doubanSuffix;
     this.getDouBanData(top250Url, 'top250', 'top250');
     this.getDouBanData(inTheatersUrl, 'inTheaters', '正在热映');
     this.getDouBanData(comingSoonUrl, 'comingSoon', '即将上映');
@@ -40,7 +40,6 @@ Page({
         'Content-Type': "application/xml"
       },
       success: function(res) {
-        console.log(res.data.subjects)
         that.dealDouBanData(res.data.subjects, type, status);
       }
     })

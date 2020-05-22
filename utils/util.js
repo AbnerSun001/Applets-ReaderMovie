@@ -28,7 +28,21 @@ const covertScore2Array = number => {
   return array;
 }
 
+const getDouBanData = (url, callBack) => {
+  wx.request({
+    url: url,
+    method: 'GET',
+    header: {
+      'Content-Type': "application/xml"
+    },
+    success: function (res) {
+      callBack(res.data.subjects);
+    }
+  })
+}
+
 module.exports = {
   formatTime: formatTime,
-  covertScore2Array: covertScore2Array
+  covertScore2Array: covertScore2Array,
+  getDouBanData: getDouBanData
 }
