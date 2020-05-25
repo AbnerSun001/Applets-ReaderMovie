@@ -1,1 +1,13 @@
-/* pages/movies/more-movie/moreMovie.wxss */
+@import "../movie-template/movie-template.wxss";
+
+.moreMovie-container {
+  padding: 10px 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.movie-container {
+  margin-bottom: 10px;
+}
+
