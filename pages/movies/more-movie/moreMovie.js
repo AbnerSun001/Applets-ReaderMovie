@@ -33,11 +33,7 @@ Page({
       default:
         dataUrl = '';        
     }
-
-    this.setData({
-      category,
-      dataUrl
-    })
+    utils.getDouBanData(dataUrl, this.dealDouBanData)
   },
 
   /**
@@ -47,23 +43,8 @@ Page({
     wx.setNavigationBarTitle({
       title: this.data.category,
     })
-    this.getDouBanData(this.data.dataUrl)
   },
 
-
-  getDouBanData: function (dataUrl) {
-    const that = this;
-    wx.request({
-      url: app.globalData.g_doubanDomain + "/v2/movie/in_theaters?" + app.globalData.g_doubanSuffix,
-      method: 'GET',
-      header: {
-        'Content-Type': ""
-      },
-      success: function (res) {
-        that.dealDouBanData(res.data.subjects);
-      }
-    })
-  },
 
   dealDouBanData: function (data) {
     let movies = [];
@@ -80,7 +61,9 @@ Page({
       movies.push(movie);
     })
     console.log(movies)
-    this.data.movies = movies
+    this.setData({
+      movies: movies
+    })
   },
   /**
    * 生命周期函数--监听页面显示
