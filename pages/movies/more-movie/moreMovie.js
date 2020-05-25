@@ -8,7 +8,8 @@ Page({
    */
   data: {
      movies: [],
-     dataUrl: ''
+     dataUrl: '',
+     start:0
   },
 
   /**
@@ -16,9 +17,6 @@ Page({
    */
   onLoad: function (options) {
     const category = options.category;
-    this.setData({
-      category
-    })
     let dataUrl;
     switch (category) {
       case '正在热映':
@@ -33,6 +31,10 @@ Page({
       default:
         dataUrl = '';        
     }
+    this.setData({
+      category,
+      dataUrl
+    })
     utils.getDouBanData(dataUrl, this.dealDouBanData)
   },
 
@@ -43,6 +45,11 @@ Page({
     wx.setNavigationBarTitle({
       title: this.data.category,
     })
+  },
+
+  onscrolltolower: function (event) {
+    let requestUrl = this.data.dataUrl + '&start=' + this.data.start + '&count=20';
+    utils.getDouBanData(requestUrl, this.dealDouBanData)
   },
 
 
@@ -60,9 +67,9 @@ Page({
       };
       movies.push(movie);
     })
-    console.log(movies)
     this.setData({
-      movies: movies
+      movies: this.data.movies.concat(movies),
+      start: this.data.start+20
     })
   },
   /**
