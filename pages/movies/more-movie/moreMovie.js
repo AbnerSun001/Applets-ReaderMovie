@@ -49,6 +49,7 @@ Page({
 
   onscrolltolower: function (event) {
     let requestUrl = this.data.dataUrl + '&start=' + this.data.start + '&count=20';
+    wx.showNavigationBarLoading();
     utils.getDouBanData(requestUrl, this.dealDouBanData)
   },
 
@@ -71,6 +72,7 @@ Page({
       movies: this.data.movies.concat(movies),
       start: this.data.start+20
     })
+    wx.hideNavigationBarLoading();
   },
   /**
    * 生命周期函数--监听页面显示
