@@ -9,7 +9,8 @@ Page({
   data: {
     inTheaters: null,
     comingSoon: null,
-    top250: null
+    top250: null,
+    showSearch: false
   },
 
   /**
@@ -73,6 +74,12 @@ Page({
     const category = event.currentTarget.dataset.category;
     wx.navigateTo({
       url: 'more-movie/moreMovie?category=' + category,
+    })
+  },
+
+  onfocus: function(event) {
+    this.setData({
+      showSearch: true
     })
   },
 

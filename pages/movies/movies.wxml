@@ -1,7 +1,25 @@
 <import src="movieList-template/movieList-template.wxml" />
+<import src="movie-template/movie-template.wxml" />
 
-<view>
+
+
+<view class="searchContainer">
+  <icon type="search" color="black" size="{{20}}"></icon>
+  <input placeholder="将会获取焦点" placeholder-class="placeholderStyle" class="inputStyle"         bindfocus="onfocus"/>
+  <icon type="cancel" color="black" size="{{20}}"></icon>
+</view>
+
+<view wx:if="{{!showSearch}}">
   <template is="movieList-template" data="{{...inTheaters}}"></template>
   <template is="movieList-template" data="{{...comingSoon}}"></template>
   <template is="movieList-template" data="{{...top250}}"></template>
 </view>
+
+<scroll-view scroll-y="true" bindscrolltolower="onscrolltolower" wx:if="{{showSearch}}">
+  <view class="moreMovie-container">
+  <text>我是一个占位符</text>
+    <block wx:for="{{movies}}" wx:for-item="movie" wx:key="index">
+      <template is="movie-template" data="{{...movie}}" />
+    </block>
+  </view>
+</scroll-view>

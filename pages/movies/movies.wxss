@@ -1,1 +1,19 @@
-@import 'movieList-template/movieList-template.wxss'
+@import 'movieList-template/movieList-template.wxss';
+@import 'more-movie/moreMovie.wxss';
+
+.searchContainer {
+  display: flex;
+  padding: 10rpx 10rpx 0;
+  justify-content: space-between;
+  background: #F2F2F2;
+  align-items: center;
+  height: 65rpx;
+}
+
+.inputStyle {
+  margin-left: -290rpx;
+}
+
+.placeholderStyle {
+  font-size: 25rpx;
+}
