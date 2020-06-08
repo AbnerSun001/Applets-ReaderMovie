@@ -3,7 +3,6 @@
 
   <scroll-view scroll-y="true" bindscrolltolower="onscrolltolower">
     <view class="moreMovie-container">
-    <text>这是更多页面</text>
       <block wx:for="{{movies}}" wx:for-item="movie" wx:key="index">
         <template is="movie-template" data="{{...movie}}" />
       </block>

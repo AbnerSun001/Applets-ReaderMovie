@@ -48,6 +48,7 @@ Page({
   },
 
   onscrolltolower: function (event) {
+    console.log('to bottom')
     let requestUrl = this.data.dataUrl + '&start=' + this.data.start + '&count=20';
     wx.showNavigationBarLoading();
     utils.getDouBanData(requestUrl, this.dealDouBanData)

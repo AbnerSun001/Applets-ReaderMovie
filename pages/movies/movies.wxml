@@ -4,9 +4,9 @@
 
 
 <view class="searchContainer">
-  <icon type="search" color="black" size="{{20}}"></icon>
-  <input placeholder="将会获取焦点" placeholder-class="placeholderStyle" class="inputStyle"         bindfocus="onfocus"/>
-  <icon type="cancel" color="black" size="{{20}}"></icon>
+  <icon type="search" color="black" size="{{20}}" bindtap = "onSearchTap"></icon>
+  <input placeholder="请输入要搜索的内容" placeholder-class="placeholderStyle" class="inputStyle"         bindinput="onInput"/>
+  <icon type="cancel" color="black" size="{{20}}" bindtap="onCancelTap"></icon>
 </view>
 
 <view wx:if="{{!showSearch}}">
@@ -17,7 +17,6 @@
 
 <scroll-view scroll-y="true" bindscrolltolower="onscrolltolower" wx:if="{{showSearch}}">
   <view class="moreMovie-container">
-  <text>我是一个占位符</text>
     <block wx:for="{{movies}}" wx:for-item="movie" wx:key="index">
       <template is="movie-template" data="{{...movie}}" />
     </block>
